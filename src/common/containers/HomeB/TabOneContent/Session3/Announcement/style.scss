@@ -1,0 +1,19 @@
+.Announcement {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.36rem;
+
+  .right {
+    @include size(null, 0.24rem);
+
+    flex: 1 1 auto;
+    h4 {
+      @include textSize(0.24rem);
+      line-height: 0.4rem;
+      height: 0.4rem;
+      @include pingfang-mid;
+      font-weight: 500;
+      overflow: hidden;
+    }
+  }
+}

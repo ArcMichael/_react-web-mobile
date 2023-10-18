@@ -1,0 +1,20 @@
+[
+    {
+        "regexp": "^\/?",
+        "static": {
+            "page_name": "新首页",
+            "page_type": "新首页",
+            "site_section_level2": "新首页",
+            "site_section_level3": "新首页"
+        }
+    },
+    {
+        "regexp": "^\/newB\/?",
+        "static": {
+            "page_name": "新首页",
+            "page_type": "新首页",
+            "site_section_level2": "新首页",
+            "site_section_level3": "新首页"
+        }
+    }    
+]

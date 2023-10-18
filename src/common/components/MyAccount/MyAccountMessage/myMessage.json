@@ -1,0 +1,16 @@
+[
+    {
+        "name":"美力资讯",
+        "isRead":false,
+        "active_class":"",
+        "tap_index":0,
+        "identification":"beauty"
+    },
+    {
+        "name":"我的消息",
+        "isRead":false,
+        "active_class":"",
+        "tap_index":1,
+        "identification":"msg"
+    }
+]

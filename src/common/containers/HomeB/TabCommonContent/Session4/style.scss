@@ -1,0 +1,43 @@
+.TabCommonContent {
+  .Session4 {
+    margin-top: 0.48rem;
+    .Session4-img {
+      margin: 0 -0.24rem;
+      height: 3.68rem;
+      text-align: center;
+      .horizontal-rect.loading-img {
+        height: 100% !important;
+        width: auto !important;
+      }
+    }
+    .Session4-text {
+      margin-top: 0.32rem;
+      > h2 {
+        margin: 0 -0.24rem;
+        padding: 0 0.32rem;
+        width: auto;
+        color: #000000;
+        overflow: hidden;
+        height: 0.64rem;
+        font-size: 0.48rem;
+        font-weight: 600;
+        color: #000000;
+        line-height: 0.64rem;
+        @include pingfang-bold;
+        margin-bottom: 0.08rem;
+      }
+      > span {
+        display: block;
+        padding: 0 0.32rem;
+        width: auto;
+        @include pingfang-regular;
+        margin: 0 -0.24rem;
+        height: 0.44rem;
+        font-size: 0.28rem;
+        font-weight: 400;
+        color: #8c8c8c;
+        line-height: 0.44rem;
+      }
+    }
+  }
+}

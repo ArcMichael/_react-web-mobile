@@ -1,0 +1,29 @@
+[
+  {
+      "key": "usableCouponList",
+      "valid": 1,
+      "name": "未使用",
+      "totalCount": 0,
+      "currentPage": 0,
+      "activeStatus": 1,
+      "couponLists": []
+  },
+  {
+      "key": "unusableCouponList",
+      "valid": 0,
+      "name": "已使用",
+      "totalCount": 0,
+      "currentPage": 0,
+      "activeStatus": 0,
+      "couponLists": []
+  },
+  {
+      "key": "expiredCouponList",
+      "valid": 2,
+      "name": "已过期",
+      "totalCount": 0,
+      "currentPage": 0,
+      "activeStatus": 0,
+      "couponLists": []
+  }
+]

@@ -1,0 +1,58 @@
+kind: pipeline
+type: docker
+name: default
+
+steps:
+  - name: test-base
+    image: docker.io/sephora/node:12
+    volumes:
+      - name: node_modules
+        path: /drone/src/node_modules
+    commands:
+      - yarn
+      - yarn lint
+      - yarn test:base
+  - name: test
+    image: docker.io/sephora/node:12
+    volumes:
+      - name: node_modules
+        path: /drone/src/node_modules
+    commands:
+      - yarn
+      - export NODE_ENV=production
+      - yarn build
+      - yarn test
+    when:
+      branch:
+        - master
+        - develop
+        - release
+  - name: failure
+    image: docker.io/sephora/node:12
+    volumes:
+      - name: node_modules
+        path: /drone/src/node_modules
+    environment:
+      EMAIL_ACCOUNT:
+        from_secret: EMAIL_ACCOUNT
+      EMAIL_PASS:
+        from_secret: EMAIL_PASS
+      DRONE_TOKEN:
+        from_secret: DRONE_TOKEN
+    commands:
+      - env
+      - yarn
+      - export DRONE_SERVER=http://10.71.94.118
+      - node ./scripts/failure-script.js
+    when:
+      status:
+        - failure
+trigger:
+  event:
+    - push
+    - pull_request
+
+volumes:
+- name: node_modules
+  host:
+    path: /home/chn-eb-ops/drone_project_cache/react-web-mobile/node_modules

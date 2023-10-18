@@ -1,0 +1,390 @@
+@import "../../../mixin";
+
+$height: 0.64rem;
+
+.search-wrap {
+  display: flex;
+  justify-content: space-between;
+  height: $height;
+  align-items: center;
+  .left {
+    flex: 0 1 auto;
+    width: 7.02rem;
+    height: 100%;
+    background: #f2f2f2;
+    border-radius: 0.16rem;
+    display: flex;
+    align-items: center;
+    .icon-search {
+      font-size: 0.4rem;
+      line-height: 0.4rem;
+      height: 0.4rem;
+      width: 0.4rem;
+      margin-left: 0.1rem;
+      margin-right: 0.1rem;
+      &::before {
+        color: #262626;
+      }
+    }
+
+    .placeholder {
+      @include pingfang-regular;
+      height: 0.34rem;
+      overflow: hidden;
+      font-size: 0.24rem;
+      font-weight: 400;
+      color: #262626;
+      line-height: 0.34rem;
+    }
+    .search-text {
+      width: 1.28rem;
+      height: 0.64rem;
+      background: #000000;
+      border-radius: 0rem 0.16rem 0.16rem 0rem;
+      position: absolute;
+      right: 0;
+      text-align: center;
+      font-size: 0.24rem;
+      @include pingfang-regular;
+      font-weight: 500;
+      color: #ffffff;
+      line-height: 0.64rem;
+    }
+  }
+  .brand {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    height: $height;
+    width: $height;
+    text-align: center;
+    line-height: $height;
+    font-size: 0.2rem;
+    border-radius: 0.15rem;
+    margin-left: 0.2rem;
+    flex: 0 0 auto;
+    @include pingfang-mid;
+    font-weight: 400;
+  }
+}
+
+.SearchShadowCover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  flex-direction: column;
+  z-index: 1111;
+  overflow: hidden;
+  .SearchShadowCover-warp {
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    .SearchShadowCover-top {
+      width: 100%;
+      height: 1rem;
+      justify-content: 1rem;
+      align-items: center;
+      border-bottom: 1px solid #ccc;
+      display: flex;
+      .close {
+      }
+      .input {
+        width: 100%;
+        height: 70%;
+        display: flex;
+        align-items: center;
+        background-color: #eee;
+
+        > input {
+          font-size: 0.24rem;
+          font-family: PingFangSC-Regular, PingFang SC;
+          font-weight: 400;
+          color: #262626;
+        }
+
+        &::before {
+          content: "";
+          display: block;
+          width: 0.8rem;
+          margin: 0 0.1rem;
+          height: 80%;
+          background-size: contain;
+          background-position: center;
+          background-image: url(https://ssl1.sephorastatic.cn/soa/nmobile/img/inputSearch.png);
+        }
+
+        input {
+          width: 100%;
+          height: 100%;
+        }
+        img {
+          height: 85%;
+        }
+      }
+      .search {
+        flex: 0 0 auto;
+        font-size: 0.3rem;
+        padding: 0 0.2rem;
+      }
+    }
+    .hotsearch {
+      padding: 30px 20px;
+      .hot_top {
+        margin-bottom: 9px;
+        .ht_left {
+          height: 44px;
+          .ht_img {
+            display: none;
+            background: url("https://ssl1.sephorastatic.cn/soa/mobile/images/hotsearch.png") no-repeat;
+            height: 44px;
+            width: 44px;
+            float: left;
+            padding-right: 12px;
+          }
+          .ht_text {
+            font-size: 30px;
+            color: #000000;
+            float: left;
+            line-height: 45px;
+          }
+        }
+        .ht_right {
+          float: right;
+          height: 30px;
+          .ht_change {
+            font-size: 28px;
+            color: #999999;
+            line-height: 88px;
+          }
+        }
+      }
+      .hot_content {
+        ul {
+          float: left;
+          width: 100%;
+          li {
+            padding: 18px 26px;
+            background: #eeeeee;
+            margin-top: 20px;
+            margin-right: 20px;
+            float: left;
+            div {
+              font-size: 24px;
+              color: #333333;
+            }
+          }
+        }
+      }
+      .hot_content:after {
+        content: "";
+        display: block;
+        height: 0;
+        clear: both;
+        overflow: hidden;
+      }
+    }
+    .history {
+      // padding-bottom:30px ;
+      width: 690px;
+      margin-left: 30px;
+      border-bottom: 1px solid #eeeeee;
+      .hot_top {
+        height: 88px;
+        margin-bottom: 9px;
+        line-height: 88px;
+        .ht_left {
+          float: left;
+          .ht_img {
+            display: none;
+            background: url("https://ssl1.sephorastatic.cn/soa/mobile/images/history.png") no-repeat;
+            height: 44px;
+            width: 44px;
+            float: left;
+            margin-top: 22px;
+            padding-right: 12px;
+          }
+          .ht_text {
+            font-size: 30px;
+            color: #000000;
+            float: left;
+            line-height: 88px;
+          }
+        }
+        .ht_right {
+          float: right;
+          height: 30px;
+          .ht_change {
+            font-size: 28px;
+            color: #999999;
+            line-height: 88px;
+            width: 88px;
+            height: 88px;
+            display: inline-block;
+            background: url("https://ssl1.sephorastatic.cn/soa/mobile/images/empty_history.png") no-repeat center center;
+            background-size: 40px 40px;
+            -webkit-background-size: 40px 40px;
+          }
+        }
+      }
+      .hot_content {
+        ul {
+          float: left;
+          width: 100%;
+          // padding-bottom:88px;
+          li {
+            background: #ffffff;
+            padding: 18px 20px;
+            margin: 0 20px 20px 0;
+            float: left;
+            background: #f5f5f5;
+            white-space: nowrap;
+            overflow: hidden;
+            max-width: 650px;
+            div {
+            }
+            span {
+              font-size: 24px;
+              color: #666666;
+              float: left;
+              width: 100%;
+              //overflow:hidden;
+            }
+            // em{
+            //    height: 44px;
+            //    width: 44px;
+            //     display: block;
+            //     background:url('https://ssl1.sephorastatic.cn/soa/mobile/images/history_delete.png') no-repeat;
+            //     float: right;
+            // }
+          }
+        }
+      }
+      .hot_content:after {
+        content: "";
+        display: block;
+        height: 0;
+        clear: both;
+        overflow: hidden;
+      }
+    }
+  }
+}
+%top {
+  position: relative;
+  width: 100%;
+  .logo-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    .horizontal-rect.loading-img {
+      height: 100% !important;
+      width: auto !important;
+    }
+  }
+}
+.fadenumclass {
+  opacity: 0;
+  webkit-animation: fadenum 0.5s 1 forwards;
+
+  -moz-animation: fadenum 0.5s 1 forwards;
+
+  animation: fadenum 0.5s 1 forwards;
+  animation-fill-mode: forwards;
+}
+.fadenumRevert {
+  webkit-animation: fadenumRevert 0.5s 1;
+
+  -moz-animation: fadenumRevert 0.5s 1;
+
+  animation: fadenumRevert 0.5s 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadenum {
+  /*设置内容由显示变为隐藏*/
+
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadenumRevert {
+  /*设置内容由显示变为隐藏*/
+
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  0% {
+    opacity: 0;
+  }
+}
+
+@keyframes InputWidth {
+  /*设置内容由显示变为隐藏*/
+
+  0% {
+    width: 7.02rem;
+    top: 0;
+    left: 0;
+    height: 0.64rem;
+  }
+  100% {
+    top: -0.88rem;
+    left: 0.8rem;
+    height: 0.64rem;
+    width: 5.44rem;
+  }
+}
+@keyframes InputWidthRevert {
+  /*设置内容由显示变为隐藏*/
+
+  100% {
+    width: 7.02rem;
+    top: 0;
+    left: 0;
+    height: 0.64rem;
+  }
+  0% {
+    top: -0.88rem;
+    left: 0.8rem;
+    height: 0.64rem;
+    width: 5.44rem;
+  }
+}
+.InputWidth {
+  top: -0.88rem;
+  left: 0.8rem;
+  height: 0.64rem;
+  width: 5.44rem;
+  webkit-animation: InputWidth 0.5s 1 forwards;
+
+  -moz-animation: InputWidth 0.5s 1 forwards;
+
+  animation: InputWidth 0.5s 1 forwards;
+  animation-fill-mode: forwards;
+}
+.InputWidthRevert {
+  webkit-animation: InputWidthRevert 0.5s 1 forwards;
+
+  -moz-animation: InputWidthRevert 0.5s 1 forwards;
+
+  animation: InputWidthRevert 0.5s 1 forwards;
+  animation-fill-mode: forwards;
+}

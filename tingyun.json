@@ -1,0 +1,12 @@
+{
+    "agent_log_level": "info",
+    "app_name": "Sephora-node-web-mobile",
+    "license_key": "Nh4he6givtKZDM48",
+    "collectors": "10.71.78.40:7665",
+    "ssl": false,
+    "network_proxy.host": "",
+    "network_proxy.port": "",
+    "network_proxy.user": "",
+    "network_proxy.password": "",
+    "audit_mode": false
+}

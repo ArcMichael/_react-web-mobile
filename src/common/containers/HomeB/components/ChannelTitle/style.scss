@@ -1,0 +1,18 @@
+@import "../../mixin";
+
+.channel-title {
+  align-items: center;
+  display: flex;
+  > h4 {
+    flex: 0 1 auto;
+    @include pingfang-bold;
+    height: 0.56rem;
+    font-size: 0.4rem;
+    font-weight: 600;
+    color: #0d0d0d;
+    line-height: 0.56rem;
+  }
+  > * {
+    flex: 0 0 auto;
+  }
+}

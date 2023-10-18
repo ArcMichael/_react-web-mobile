@@ -1,0 +1,15 @@
+@import "../../mixin";
+@import "./Announcement/style";
+@import "../../components/Brandwall/style";
+
+.TabOneContent {
+  .Session3 {
+    padding-top: 0.52rem;
+    .title {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      margin: 0.3rem 0;
+    }
+  }
+}

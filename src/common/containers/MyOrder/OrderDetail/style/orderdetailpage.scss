@@ -1,0 +1,799 @@
+@import "../../../../../public/style/common/_module_deeplink.scss";
+@import "../../../../../public/style/common/module_scroll_select.scss";
+@import "../../../../../public/style/common/_module_popup_ui.scss";
+.myorder_detail_container {
+  background-color: #f5f5f5;
+  padding-bottom: 1.5rem;
+}
+.orderdetail-page-title-back {
+  height: 64px;
+  width: 64px;
+  position: absolute;
+  top: 12px;
+  left: 24px;
+  z-index: 10;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.orderdetail-page-title-con {
+  width: 100%;
+  height: 88px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  font-size: 40px;
+  font-family: "SourceHanSansCN-Light";
+  font-weight: 400;
+  color: #fff;
+  line-height: 88px;
+  text-align: center;
+  box-sizing: border-box;
+}
+.orderdetail-page-title {
+  width: 100%;
+  height: 87px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+  background-size: cover;
+  background-image: url("https://sslstage1.sephorastatic.cn/soa/mobile/images/order/orderDetail_title_paid_minihead.png");
+  &.large {
+    height: 143px;
+    background-image: url("https://sslstage1.sephorastatic.cn/soa/mobile/images/order/orderDetail_title_tobepaid_minihead.png");
+  }
+}
+.orderdetail-page-title-content {
+  width: 100%;
+  height: 88px;
+  position: relative;
+}
+.orderdetail-page-title-customer {
+  position: absolute;
+  top: 12px;
+  right: 24px;
+  display: inline-block;
+  text-align: center;
+  img {
+    width: 64px;
+    height: 64px;
+  }
+  div {
+    height: 28px;
+    line-height: 28px;
+    color: #3f403f;
+    font-size: 20px;
+  }
+}
+
+.orderdetail-page-title-text {
+  transition: 0.5s;
+  color: #fff;
+}
+
+.orderdetail-page-order-countdown {
+  height: 48px;
+  line-height: 48px;
+  font-size: 28px;
+  text-align: center;
+  color: #fff;
+  span {
+    font-weight: 400;
+    &:nth-child(1) {
+      margin-right: 12px;
+      font-weight: 600;
+    }
+    &:nth-child(2) {
+      font-weight: 500;
+      margin-right: 4px;
+      font-size: 24px;
+    }
+    &:nth-child(3) {
+      font-weight: 500;
+      margin-right: 24px;
+    }
+  }
+}
+
+.orderdetail-page-header {
+  color: #fff;
+  font-weight: 600;
+  padding-bottom: 130px;
+  padding-top: 88px;
+  background-size: cover;
+  background-image: url("https://sslstage1.sephorastatic.cn/soa/mobile/images/order/orderDetail_title_paid_default.png");
+  &.large {
+    padding-top: 156px;
+    height: 80px;
+    background-image: url("https://sslstage1.sephorastatic.cn/soa/mobile/images/order/orderDetail_title_tobepaid_default.png");
+  }
+  .orderdetail-page-order-status {
+    height: 88px;
+    line-height: 88px;
+    text-align: center;
+    font-size: 40px;
+  }
+  .orderdetail-page-order-pay {
+    width: 240px;
+    height: 80px;
+    border-radius: 80px;
+    background-color: #fff;
+    line-height: 80px;
+    text-align: center;
+    color: #000;
+    font-size: 28px;
+    margin: 0 auto;
+    &.disabled {
+      background: #d3d3d3;
+      color: #fff;
+    }
+  }
+}
+
+.common-delivery-address {
+  background-color: #fff;
+  width: 702px;
+  margin: -98px auto 24px;
+  // height: 196px;
+  border-radius: 24px;
+  padding: 32px 48px 32px 64px;
+  box-sizing: border-box;
+  position: relative;
+  .iconC-address {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    top: 38px;
+    left: 24px;
+    background-image: url("https://sslstage1.sephorastatic.cn/soa/mobile/images/order/location.png");
+    background-size: cover;
+  }
+  .iconC-right {
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    top: 50%;
+    transform: translateY(-50%) rotateZ(270deg);
+    right: 34px;
+    background-size: cover;
+    background-image: url("https://sslstage1.sephorastatic.cn/soa/mobile/images/order/open_icon.png");
+  }
+  .user-info {
+    font-size: 28px;
+    .userInfo {
+      color: #000;
+      font-weight: 600;
+      line-height: 44px;
+      margin-right: 16px;
+    }
+    .phone {
+      font-weight: 400;
+      line-height: 44px;
+    }
+  }
+  .address {
+    .address-info {
+      width: 606px;
+      line-height: 44px;
+      font-size: 28px;
+      font-weight: 400;
+      display: block;
+      white-space: nowrap; /* 规定文本是否折行 */
+      overflow: hidden; /* 规定超出内容宽度的元素隐藏 */
+      text-overflow: ellipsis;
+      &.sm {
+        width: 566px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        white-space: unset;
+      }
+    }
+  }
+}
+
+.address_popup {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+
+.hide {
+  display: none;
+}
+
+#my_address_add-page-title_increased {
+  line-height: 88px;
+  margin-top: -8px;
+  color: rgb(238, 0, 0);
+  font-size: 28px;
+  letter-spacing: 10px;
+}
+
+.my_address_province_province {
+  height: 100%;
+}
+
+.myorder_detail_products_container {
+  width: 7.02rem;
+  background-color: #fff;
+  border-radius: 0.24rem;
+  margin: 0 auto;
+  .myorder_detail_products_price {
+    padding: 0.32rem 0.64rem 0.32rem 0.32rem;
+    border-top: 0.04rem solid #f5f5f5;
+    box-sizing: border-box;
+    position: relative;
+    .price_main {
+      margin-bottom: 0.08rem;
+      .price_main_quantity {
+        font-size: 0.28rem;
+        color: #000;
+        line-height: 0.44rem;
+      }
+      .price_main_gift_quantity {
+        line-height: 0.52rem;
+        font-size: 0.24rem;
+      }
+      .price_main_price {
+        float: right;
+        line-height: 0.44rem;
+        font-size: 0.28rem;
+        font-weight: 500;
+        span {
+          &:nth-child(1) {
+            font-weight: 600;
+          }
+          &:nth-child(2) {
+            font-size: 0.24rem;
+            margin: 0 0.04rem;
+          }
+          &:nth-child(3) {
+            font-size: 0.32rem;
+          }
+        }
+      }
+      em {
+        position: absolute;
+        right: 0.24rem;
+        top: 0.38rem;
+      }
+    }
+    .price_others {
+      line-height: 0.44rem;
+      font-size: 0.28rem;
+      color: #737373;
+      font-weight: 400;
+      .price_price {
+        float: right;
+      }
+    }
+  }
+}
+
+.my_address_all_ul {
+  height: 100%;
+}
+
+.myorder_detail_products {
+  padding: 24px 0;
+  overflow: hidden;
+  .myorder_detail_products_delivery {
+    position: relative;
+    width: 654px;
+    margin: 0 auto;
+    background-color: #f7f7f7;
+    padding: 24px;
+    box-sizing: border-box;
+    border-radius: 16px;
+    .delivery_summary {
+      line-height: 44px;
+      color: #000;
+      font-size: 28px;
+      font-weight: 600;
+      margin-bottom: 0.08rem;
+    }
+    em {
+      width: 0.32rem;
+      height: 0.32rem;
+      position: absolute;
+      right: 0.16rem;
+      top: 0.3rem;
+      background-size: cover;
+      background-image: url("https://sslstage1.sephorastatic.cn/soa/mobile/images/order/open_icon.png");
+      transform: rotate(270deg);
+    }
+    .delivery_packages {
+      width: 1rem;
+      line-height: 0.44rem;
+      font-size: 0.28rem;
+      display: inline-block;
+      vertical-align: top;
+    }
+    .delivery_packages_info {
+      width: 4.66rem;
+      display: inline-block;
+    }
+    .delivery_trackingInfo {
+      line-height: 0.44rem;
+      width: 4.66rem;
+      font-size: 0.28rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .delivery_updateTime {
+      line-height: 0.4rem;
+      font-size: 0.24rem;
+      color: #595959;
+    }
+    &.single {
+      em {
+        top: 0.5rem;
+      }
+    }
+  }
+}
+
+.myorder_detail_product {
+  margin: 0.04rem 0;
+}
+
+.myorder_detail_integral_info {
+  display: flex;
+  justify-content: space-between;
+  line-height: 0.22rem;
+  border-radius: 0.24rem;
+  background-color: #fff;
+  margin: 0.24rem auto 0;
+  padding: 0.32rem;
+  font-size: 0.28rem;
+  width: 7.02rem;
+  box-sizing: border-box;
+  align-items: center;
+  .go_rewardsBoutique {
+    float: right;
+    // width: 1.02rem;
+    font-size: 0.24rem;
+  }
+  .icon-right{
+    float: right;
+    transform: rotate(270deg);
+  }
+  .flex-change{
+    display: flex;
+    align-items: center;
+  }
+}
+
+.myorder_detail_order_info {
+  width: 7.02rem;
+  padding: 0.32rem;
+  background-color: #fff;
+  box-sizing: border-box;
+  margin: 0.24rem auto 0;
+  position: relative;
+  border-radius: 0.24rem;
+  .order_info_title {
+    line-height: 0.44rem;
+    font-size: 0.28rem;
+    font-weight: 600;
+    margin-bottom: 0.08rem;
+  }
+  .order_info_group {
+    line-height: 0.44rem;
+    font-size: 0.28rem;
+    span {
+      &:nth-child(1) {
+        margin-right: 0.32rem;
+        vertical-align: top;
+      }
+    }
+    .order_info_copy {
+      width: 0.58rem;
+      height: 0.3rem;
+      background-image: url("https://sslstage1.sephorastatic.cn/soa/mobile/images/order/copy_order_icon.png");
+      display: inline-block;
+      background-size: cover;
+      margin-left: 0.1rem;
+      vertical-align: middle;
+      margin-bottom: 8px;
+    }
+    & > div {
+      
+      div {
+        display: inline-block;
+        span {
+          &:nth-child(1) {
+            margin-right: 0rem;
+          }
+        }
+      }
+    }
+  }
+  .expand_icon {
+    position: absolute;
+    top: 0.38rem;
+    right: 0.24rem;
+  }
+}
+
+.expand_icon {
+  width: 0.34rem;
+  height: 0.34rem;
+  background-size: cover;
+  background-image: url("https://sslstage1.sephorastatic.cn/soa/mobile/images/order/open_icon.png");
+  &.open {
+    transform: rotateZ(180deg);
+  }
+}
+
+.plpPage-products {
+  font-family: PingFangSC-Medium, PingFang SC, Helvetica, Arial, Microsoft Yahei,
+    Hiragino Sans GB, Heiti SC, WenQuanYi Micro Hei, sans-serif;
+  width: 100%;
+  padding: 0 24px 24px;
+  overflow: hidden;
+  box-sizing: border-box;
+  .category_productmess {
+    margin: 12px 12px 0 0;
+    width: 344px;
+    height: 540px;
+    border-radius: 24px;
+    background-color: #fff;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    &:nth-of-type(even) {
+      margin-right: 0px;
+    }
+    .product_img_label {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 344px;
+    }
+    .product_img {
+      width: 100%;
+      height: 344px;
+      position: relative;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .product_mess {
+      height: 234px;
+      width: 100%;
+      padding: 18px 16px 24px;
+      box-sizing: border-box;
+      position: relative;
+      .head {
+        font-size: 24px;
+        font-weight: 500;
+        height: 64px;
+        overflow: hidden;
+        color: #000;
+        line-height: 32px;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        word-break: break-all;
+        .product-message-tags {
+          display: inline-block;
+        }
+        .product-message-tag {
+          height: 28px;
+          margin-right: 8px;
+          display: inline-block;
+        }
+      }
+      .price {
+        font-size: 28px;
+        color: #000;
+        font-weight: 500;
+        line-height: 44px;
+        height: 44px;
+        position: absolute;
+        width: 312px;
+        top: 98px;
+        left: 16px;
+        span:nth-child(2):before {
+          content: "~";
+          font-size: 28px;
+          margin: 0 10px;
+        }
+      }
+      .delete {
+        width: 312px;
+        height: 28px;
+        font-size: 22px;
+        font-weight: 500;
+        color: #8c8c8c;
+        line-height: 28px;
+        position: absolute;
+        top: 140px;
+        text-decoration: line-through;
+        span:nth-child(2):before {
+          content: "~";
+          font-size: 28px;
+          margin: 0 10px;
+        }
+      }
+    }
+  }
+}
+.guess-you-like {
+  background-color: #f5f5f5;
+  margin-bottom: 0px;
+  .guess-you-like-title {
+    line-height: 56px;
+    height: unset;
+    font-size: 40px;
+    font-weight: 500;
+    font-family: PingFangSC-Medium, PingFang SC;
+    padding: 32px;
+    box-sizing: border-box;
+    span {
+      position: relative;
+      left: 0;
+    }
+  }
+}
+
+.button_container {
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.24rem 0.32rem;
+  z-index: 1;
+  .more_button_toogle {
+    float: left;
+    width: 0.72rem;
+    height: 0.72rem;
+    background-size: cover;
+    background-image: url("https://sslstage1.sephorastatic.cn/soa/mobile/images/order/more_button.png");
+  }
+  .bottom_buttons {
+    float: right;
+    height: 0.72rem;
+    font-size: 0.28rem;
+    .button_item {
+      margin-left: 0.16rem;
+      height: 100%;
+      width: 1.76rem;
+      border-radius: 0.36rem;
+      text-align: center;
+      line-height: 0.72rem;
+      float: right;
+      box-sizing: border-box;
+      border: 0.02rem solid #737373;
+      &.buy-pay {
+        background-color: #dd0031;
+        color: #fff;
+        border: none;
+      }
+      &.disabled {
+        background: #d3d3d3;
+        border: none;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.more_button {
+  position: absolute;
+  background-color: #fff;
+  border-radius: 0.24rem;
+  bottom: 1.15rem;
+  box-shadow: 0px 0.1rem 0.2rem 0px rgb(0 0 0 / 20%);
+  padding: 0.24rem;
+  line-height: 0.44rem;
+  min-width: 1.6rem;
+  min-height: 0.5rem;
+  &::after {
+    content: " ";
+    border-width: 0.2rem 0 0.2rem 0.2rem;
+    border-color: transparent transparent transparent #fff;
+    position: absolute;
+    bottom: -0.15rem;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    left: 0.3rem;
+  }
+  div {
+    text-align: center;
+    color: #404040;
+    font-size: 0.28rem;
+  }
+}
+
+.order_detail_advertising {
+  width: 7.02rem;
+  position: fixed;
+  bottom: 1.5rem;
+  z-index: 1;
+  left: 0.24rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 0.2rem 0.32rem 0.2rem 0.26rem;
+  box-sizing: border-box;
+  border-radius: 0.24rem;
+  display: flex;
+  font-size: 0.24rem;
+  font-weight: 400;
+  justify-content: space-between;
+  align-items: center;
+  .advertising_close {
+    img {
+      width: 0.2rem;
+      height: 0.2rem;
+    }
+  }
+  .advertising_content {
+    width: 6rem;
+    overflow: hidden; /* 规定超出内容宽度的元素隐藏 */
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-height: 0.4rem;
+  }
+}
+.recommend-order-bg {
+  margin: 24px auto;
+  width: 702px;
+  height: 462px;
+  border-radius: 24px;
+  background-color: #FFF;
+  padding: 24px 24px 32px;
+  box-sizing: border-box;
+}
+.recommend-order-top {
+  font-size: 32px;
+  font-family: PingFangSC-Semibold, PingFang SC;
+  font-weight: 600;
+  color: #000;
+  line-height: 48px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.recommend-close {
+  font-size: 64px;
+  font-weight: lighter;
+}
+.recommend-list {
+  margin-top: 24px;
+  display: flex;
+  li {
+    width: 208px;
+    height: 334px;
+    background: #ffffff;
+    border-radius: 16px;
+    font-family: PingFangSC-Medium, PingFang SC;
+    font-weight: 500;
+    color: #000000;
+    line-height: 28px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin-left:16px ;
+    &:first-child{
+      margin-left:0;
+    }
+    img {
+      width: 200px;
+      height: 201px;
+      border-radius: 16px 16px 0px 0px;
+      align-self: center;
+    }
+    .shop-title {
+      margin-top: 16px;
+      font-size: 22px;
+      font-family: PingFangSC-Medium, PingFang SC;
+      font-weight: 500;
+      color: #000000;
+      line-height: 28px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2; //限制文本的行数，只显示两行
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      padding: 0 8px;
+    }
+    .shop-price {
+      margin-top: 8px;
+      font-size: 20px;
+      font-family: PingFangSC-Medium, PingFang SC;
+      font-weight: 500;
+      color: #000000;
+      line-height: 28px;
+      padding: 0 8px;
+    }
+  }
+}
+.popup-alert {
+  position: fixed;
+  z-index: 201;
+  left: 50%;
+  top: 40%;
+  min-width: 208px;
+  // width: 476px;
+  min-height: 252px;
+  // height: 320px;
+  transform: translate(-50%, -50%);
+  border-radius: 24px;
+  background: rgba(0, 0, 0, 0.75);
+  &.large {
+    width: 576px;
+  }
+  &.cur {
+    top: 24%;
+
+    // opacity: 0.8;
+    background: rgba(0, 0, 0, 0.8);
+
+    em {
+      width: 368px;
+      left: 58px;
+    }
+  }
+
+  &.more {
+    top: 36%;
+  }
+
+  span {
+    display: block;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    left: 50%;
+    top: 64px;
+    margin-left: -40px;
+    background: url("https://ssl1.sephorastatic.cn/soa/mobile/images/mobile_pdp.png") -88px -120px;
+
+    &.warnning {
+      background: url("https://ssl1.sephorastatic.cn/soa/mobile/images/mobile_pdp.png") -777px -135px;
+    }
+  }
+
+  .popup-alert-tip {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 48px 0 0 50%;
+    transform: translateX(-50%);
+  }
+
+  .popup-alert-bottom {
+    padding: 18px 48px 48px;
+  }
+
+  .popup-alert-bottom-main {
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
+
+  em {
+    display: block;
+    font-family: "SourceHanSansCN-Normal";
+    font-size: 28px;
+    color: #ffffff;
+    line-height: 44px;
+    max-width: 480px;
+    text-align: center;
+  }
+}
+.fourBtn{
+  padding-right: 32px;
+}

@@ -1,0 +1,26 @@
+[
+    {
+        "name":"全部",
+        "showStatus":"ALL",
+        "amount":"",
+        "amount_class":"",
+        "active_class":"active",
+        "tap_index":0
+    },
+    {
+        "name":"处理中",
+        "showStatus":"DRW",
+        "amount":"",
+        "amount_class":"",
+        "active_class":"",
+        "tap_index":1
+    },
+    {
+        "name":"已完成",
+        "showStatus":"DRF",
+        "amount":"",
+        "amount_class":"",
+        "active_class":"",
+        "tap_index":2
+    }
+]

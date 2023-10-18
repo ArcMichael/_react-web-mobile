@@ -1,0 +1,863 @@
+@import "../../../../../public/style/lib/index.scss";
+@import "../../../../../public/style/common/common_page_title.scss";
+.myOrderList {
+  background: #f5f5f5;
+  line-height: normal;
+  min-height: 100vh;
+  .hid {
+    display: none;
+  }
+  .common-page-title {
+    background-color: #fff;
+    color: #000;
+  }
+  .myOrderList-top {
+    width: 750px;
+    height: 88px;
+    border-bottom: 1px solid #bdbdbd;
+    box-sizing: border-box;
+    background: #fff;
+    position: relative;
+    span {
+      float: left;
+      margin-left: 20px;
+      display: block;
+      width: 60px;
+      height: 60px;
+      margin-top: 14px;
+    }
+    p {
+      float: right;
+      font-family: "SourceHanSansCN-Light";
+      font-size: 36px;
+      color: #1b1b1b;
+      margin-right: 299px;
+      margin-top: 26px;
+    }
+    img {
+      width: 36px;
+      height: 40px;
+      position: absolute;
+      right: 24px;
+      bottom: 23px;
+    }
+    h3 {
+      position: absolute;
+      top: 8px;
+      right: 32px;
+      display: inline-block;
+      width: 80px;
+      height: 88px;
+      text-align: center;
+      img {
+        width: 48px;
+        height: 48px;
+        position: static;
+      }
+      div {
+        height: 28px;
+        line-height: 28px;
+        color: #3f403f;
+        font-size: 20px;
+        font-weight: 500;
+      }
+    }
+  }
+  .myOrderList-empty {
+    width: 100%;
+    height: 256px;
+    position: relative;
+    padding-top: 112px;
+    text-align: center;
+    box-sizing: border-box;
+    span {
+      display: block;
+      &:nth-child(1) {
+        width: 64px;
+        height: 64px;
+        background: url("https://sslstage1.sephorastatic.cn/soa/mobile/images/order/group_icon.png")
+          no-repeat center;
+        background-size: 100%;
+        margin: 0 auto;
+        margin-bottom: 8px;
+      }
+      &:nth-child(2) {
+        height: 40px;
+        font-size: 24px;
+        font-family: " PingFangSC-Regular, PingFang SC";
+        font-weight: 400;
+        color: #8c8c8c;
+        line-height: 40px;
+      }
+    }
+  }
+  .myOrderList-tab-box {
+    width: 750px;
+    height: 146px;
+  }
+  .myOrderList-tab-con {
+    width: 750px;
+    height: 146px;
+    &.cur {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 100;
+    }
+  }
+  .myOrderList-tab-con-offline-order {
+    width: 750px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 32px;
+    box-sizing: border-box;
+    div {
+      &:nth-child(1) {
+        font-size: 28px;
+        font-family: PingFangSC-Semibold, PingFang SC;
+        font-weight: 600;
+        color: #000000;
+        line-height: 44px;
+      }
+      &:nth-child(2) {
+        font-size: 24px;
+        font-family: PingFangSC-Regular, PingFang SC;
+        font-weight: 400;
+        color: #737373;
+        display: flex;
+        align-items: center;
+        img {
+          width: 30px;
+          margin-left: 8px;
+        }
+      }
+    }
+  }
+  .myOrderList-tab {
+    width: 750px;
+    height: 86px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    box-sizing: border-box;
+    padding: 0 24px;
+    li {
+      flex-shrink: 0;
+      font-size: 28px;
+      color: #404040;
+      height: 100%;
+      width: 20%;
+      text-align: center;
+      position: relative;
+      box-sizing: border-box;
+      line-height: 86px;
+      &.cur {
+        box-sizing: border-box;
+        position: relative;
+        font-size: 40px;
+        font-family: PingFangSC-Semibold, PingFang SC;
+        font-weight: 600;
+        color: #000000;
+        &::after {
+          content: "";
+          width: 32px;
+          height: 6px;
+          background: #000000;
+          border-radius: 3px;
+          position: absolute;
+          bottom: 16px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+      .red_num {
+        font-family: "PingFangSC-Medium";
+        font-size: 20px;
+        color: #ffffff;
+        letter-spacing: 0;
+        background: #ee0000;
+        position: absolute;
+        top: 15px;
+        right: -18px;
+        text-align: center;
+
+        &.lenS {
+          width: 32px;
+          border-radius: 50%;
+          height: 32px;
+          line-height: 32px;
+        }
+        &.lenL {
+          width: 46px;
+          border-radius: 12px;
+          height: 30px;
+          line-height: 30px;
+          text-align: left;
+          text-indent: 5px;
+        }
+        em {
+          width: 20px;
+          height: 20px;
+          position: absolute;
+          right: 2px;
+          top: -5px;
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+  .myOrderList-items-other {
+    background: #f5f5f5;
+  }
+  .myOrderList-content {
+    width: 702px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 24px;
+    margin-top: 24px;
+    .myOrderList-content-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-sizing: border-box;
+      padding: 32px 32px 8px 32px;
+      .content-top-left {
+        display: flex;
+        height: 48px;
+        align-items: center;
+        p {
+          font-size: 24px;
+          font-family: PingFangSC-Regular, PingFang SC;
+          font-weight: 400;
+          color: #000000;
+          span {
+            margin: 0 8px;
+          }
+        }
+        .copy {
+          width: 56px;
+          height: 30px;
+          background: #ffffff;
+          border-radius: 20px;
+          border: 2px solid #a6a6a6;
+          font-size: 20px;
+          font-family: "PingFangSC-Regular, PingFang SC";
+          font-weight: 400;
+          color: #737373;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+      .content-top-status {
+        font-size: 32px;
+        font-family: PingFangSC-Semibold, PingFang SC;
+        font-weight: 600;
+        color: #dd0031;
+        height: 48px;
+        line-height: 48px;
+      }
+    }
+
+    .myOrderList-content-bottom {
+      height: 120px;
+      button {
+        float: right;
+        // width: 30%;
+        // height: 88px;
+        font-family: "PingFangSC-Medium, PingFang SC;";
+        font-size: 28px;
+        font-weight: 500;
+        color: #ffffff;
+        margin-right: 24px;
+        padding: 0 32px;
+        height: 72px;
+        background: #dd0031;
+        box-shadow: 0px 10px 20px 0px rgba(221, 0, 49, 0.25);
+        border-radius: 38px;
+        &.Immediately-pay {
+          background: #ee0000;
+          white-space: nowrap;
+          &.disabled {
+            background-color: #999;
+            box-shadow: none;
+          }
+        }
+        &.cancellation-of-order {
+          border: 2px solid #dddddd;
+          color: #666666;
+        }
+        &.check-the-logistics {
+          background: #fff;
+          color: #404040;
+          border: 2px solid #737373;
+          box-shadow: none;
+        }
+        &.Product-Reviews {
+          background: #000000;
+        }
+        &.buy-again {
+          background: #dd0031;
+        }
+      }
+      &.cur {
+        height: 0;
+      }
+      .orderList-calcCancelTime {
+        font-size: 28px;
+        font-family: "PingFangSC-Regular, PingFang SC";
+        font-weight: 400;
+        color: #dd0031;
+        float: left;
+        margin-top: 14px;
+        margin-left: 32px;
+      }
+    }
+    .orderInfo_deliveryInfo_container {
+      width: 654px;
+      height: 132px;
+      background: #f7f7f7;
+      border-radius: 16px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 16px 0 32px;
+      box-sizing: border-box;
+      .orderInfo_deliveryInfo_icon {
+        transform: rotate(-90deg);
+        img {
+          width: 32px;
+        }
+      }
+      .orderInfo_deliveryInfo_content {
+        color: #000;
+        .orderInfo_deliveryInfo_message {
+          width: 550px;
+          height: 44px;
+          font-size: 28px;
+          font-family: "PingFangSC-Regular, PingFang SC";
+          font-weight: 400;
+          color: #000000;
+          line-height: 44px;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+        .orderInfo_deliveryInfo_time {
+          height: 40px;
+          font-size: 24px;
+          font-family: "PingFangSC-Regular, PingFang SC";
+          font-weight: 400;
+          color: #595959;
+          line-height: 40px;
+        }
+      }
+    }
+  }
+  .deliveryTime {
+    margin: 0 20px;
+    border-top: 1px solid #eeeeee;
+    height: 90px;
+    position: relative;
+    .tip {
+      font-family: "SourceHanSansCN-Light";
+      font-size: 24px;
+      color: #000000;
+      position: absolute;
+      right: 0;
+      top: 33px;
+    }
+    .deliveryTime-left {
+      float: left;
+      font-family: "SourceHanSansCN-Light";
+      font-size: 26px;
+      color: #666666;
+    }
+    .deliveryTime-right {
+      float: right;
+      font-family: "SourceHanSansCN-Light";
+      font-size: 26px;
+      color: #000000;
+    }
+  }
+  .myOrderList-goods-total {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    border-top: 4px solid #f5f5f5;
+    padding: 30px 32px 16px 32px;
+
+    .total-left {
+      font-size: 28px;
+      font-family: PingFangSC-Regular, PingFang SC;
+      font-weight: 400;
+      color: #737373;
+      span {
+        font-size: 24px;
+      }
+    }
+    .total-right {
+      :nth-child(1) {
+        font-size: 32px;
+        font-family: PingFangSC-Medium, PingFang SC;
+        font-weight: 500;
+        color: #000000;
+        line-height: 48px;
+        span {
+          font-size: 28px;
+          font-family: PingFangSC-Semibold, PingFang SC;
+          font-weight: 600;
+          color: #000000;
+          line-height: 44px;
+          margin-right: 5px;
+        }
+      }
+      :nth-child(2) {
+        font-size: 24px;
+        font-family: PingFangSC-Regular, PingFang SC;
+        font-weight: 400;
+        color: #737373;
+        line-height: 40px;
+        text-align: right;
+      }
+    }
+  }
+  .deliveryTime {
+    height: 106px;
+    line-height: 106px;
+  }
+
+  .myOrderList-depositNoPay {
+    width: 702px;
+    height: 92px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 24px;
+    margin-top: 24px;
+    box-sizing: border-box;
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &.hid {
+      display: none;
+    }
+    .myOrderList-depositNoPay-content {
+      font-size: 28px;
+      font-family: "PingFangSC-Semibold, PingFang SC";
+      font-weight: 600;
+      color: #000000;
+    }
+    .myOrderList-depositNoPay-tips {
+      display: flex;
+      font-size: 24px;
+      font-family: "PingFangSC-Regular, PingFang SC";
+      font-weight: 400;
+      color: #000000;
+      align-items: center;
+      img {
+        margin-left: 8px;
+        width: 32px;
+        transform: rotate(-90deg);
+      }
+    }
+  }
+  .myOrderList-items-DPPB {
+    padding-bottom: 184px;
+  }
+  .myOrderList-depositNoPay-bottom {
+    z-index: 11;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 160px;
+    background: #fff;
+    box-shadow: 0px -10px 30px 0px rgba(0, 0, 0, 0.05),
+      0px 10px 30px 0px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 32px;
+    box-sizing: border-box;
+    align-items: center;
+    .common-checkbox {
+      // margin: 40px 10px 0 24px;
+      vertical-align: sub;
+    }
+    label {
+      font-size: 24px;
+      line-height: 110px;
+    }
+    .myOrderList-depositNoPay-button {
+      height: 80px;
+      background-color: #dd0031;
+      box-shadow: 0px 10px 20px 0px #dca3b0;
+      border-radius: 40px;
+      font-size: 32px;
+      font-family: "PingFangSC-Regular, PingFang SC";
+      font-weight: 400;
+      color: #ffffff;
+      line-height: 80px;
+      padding: 0 32px;
+      &.disabled {
+        background-color: #999;
+        box-shadow: none;
+      }
+    }
+  }
+  .view-more {
+    margin: 32px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span {
+      font-size: 24px;
+      font-family: PingFangSC-Regular, PingFang SC;
+      font-weight: 400;
+      color: #737373;
+    }
+    img {
+      width: 32px;
+      transform: rotate(-90deg);
+    }
+  }
+}
+
+.common-checkbox {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  vertical-align: text-top;
+  display: inline-block;
+  margin-right: 16px;
+  background: url("https://ssl1.sephorastatic.cn/soa/mobile/images/uncheckedCircle_mid.png")
+    no-repeat center;
+  background-size: contain;
+  &.cur {
+    background: url("https://ssl1.sephorastatic.cn/soa/mobile/images/checkbox_mid.png")
+      no-repeat center;
+    background-size: contain;
+  }
+  &.disable {
+    opacity: 0.5;
+    background: url("https://ssl1.sephorastatic.cn/soa/mobile/images/uncheckedCircle_mid.png")
+      no-repeat center;
+    background-size: contain;
+    .statue {
+      width: 32px;
+      height: 32px;
+    }
+  }
+  &.disabled {
+    background: url("https://sslstage1.sephorastatic.cn/soa/mobile/images/order/radio-disabled.png")
+      no-repeat center;
+    background-size: contain;
+  }
+  .checkbox {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  }
+  .statue {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    left: 0px;
+    top: 0px;
+    z-index: 2;
+  }
+}
+.guess-you-like {
+  .guess-you-like-title {
+    line-height: 56px;
+    height: 56px;
+    font-size: 40px;
+    font-weight: 500;
+    font-family: PingFangSC-Medium, PingFang SC;
+    padding: 32px;
+  }
+}
+.plpPage-products {
+  font-family: PingFangSC-Medium, PingFang SC, Helvetica, Arial, Microsoft Yahei,
+    Hiragino Sans GB, Heiti SC, WenQuanYi Micro Hei, sans-serif;
+  width: 100%;
+  padding: 0 24px 24px;
+  overflow: hidden;
+  box-sizing: border-box;
+  .category_productmess {
+    margin: 12px 12px 0 0;
+    width: 344px;
+    height: 540px;
+    border-radius: 24px;
+    background-color: #fff;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    &:nth-of-type(even) {
+      margin-right: 0px;
+    }
+    .product_img_label {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 344px;
+    }
+    .product_img {
+      width: 100%;
+      height: 344px;
+      position: relative;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      .noinventory_label {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 144px;
+        height: 48px;
+        border-radius: 8px;
+        background-color: rgba(0, 0, 0, 0.75);
+        line-height: 48px;
+        color: #fff;
+        font-size: 24px;
+        text-align: center;
+        font-weight: 400;
+      }
+    }
+    .product_mess {
+      height: 234px;
+      width: 100%;
+      padding: 18px 16px 24px;
+      box-sizing: border-box;
+      position: relative;
+      .head {
+        font-size: 24px;
+        font-weight: 500;
+        height: 64px;
+        overflow: hidden;
+        color: #000;
+        line-height: 32px;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        word-break: break-all;
+        .product-message-tags {
+          display: inline-block;
+        }
+        .product-message-tag {
+          height: 28px;
+          margin-right: 8px;
+          display: inline-block;
+        }
+      }
+      .price {
+        font-size: 28px;
+        color: #000;
+        font-weight: 500;
+        line-height: 44px;
+        height: 44px;
+        position: absolute;
+        width: 312px;
+        top: 98px;
+        left: 16px;
+        span:nth-child(2):before {
+          content: "~";
+          font-size: 28px;
+          margin: 0 10px;
+        }
+      }
+      .delete {
+        width: 312px;
+        height: 28px;
+        font-size: 22px;
+        font-weight: 500;
+        color: #8c8c8c;
+        line-height: 28px;
+        position: absolute;
+        top: 140px;
+        text-decoration: line-through;
+        span:nth-child(2):before {
+          content: "~";
+          font-size: 28px;
+          margin: 0 10px;
+        }
+      }
+    }
+  }
+}
+.order_list_advertising {
+  width: 702px;
+  position: fixed;
+  bottom: 150px;
+  z-index: 1;
+  left: 24px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 20px 32px 20px 26px;
+  box-sizing: border-box;
+  border-radius: 24px;
+  display: flex;
+  font-size: 24px;
+  font-weight: 400;
+  justify-content: space-between;
+  align-items: center;
+  .advertising_close {
+    img {
+      width: 20px;
+    }
+  }
+  .advertising_content {
+    width: 600px;
+    // overflow: hidden;
+    // text-overflow: ellipsis;
+    // display: -webkit-box;
+    // -webkit-line-clamp: 2;
+    // -webkit-box-orient: vertical;
+    line-height: 40px;
+  }
+}
+.recommend-order-bg {
+  margin: 24px auto;
+  width: 702px;
+  height: 462px;
+  border-radius: 24px;
+  background-image: url("https://sslstage1.sephorastatic.cn/soa/nmobile/img/orderGTnice-bg.png");
+  background-size: 100% 100%;
+  padding: 24px 24px 32px;
+  box-sizing: border-box;
+}
+.recommend-order-top {
+  font-size: 32px;
+  font-family: PingFangSC-Semibold, PingFang SC;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 48px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.recommend-close {
+  font-size: 64px;
+  font-weight: lighter;
+}
+.recommend-list {
+  margin-top: 24px;
+  display: flex;
+  li {
+    width: 208px;
+    height: 334px;
+    background: #ffffff;
+    border-radius: 16px;
+    font-family: PingFangSC-Medium, PingFang SC;
+    font-weight: 500;
+    color: #000000;
+    line-height: 28px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin-left:16px ;
+    &:first-child{
+      margin-left:0;
+    }
+    img {
+      width: 200px;
+      height: 201px;
+      border-radius: 16px 16px 0px 0px;
+      align-self: center;
+    }
+    .shop-title {
+      margin-top: 16px;
+      font-size: 22px;
+      font-family: PingFangSC-Medium, PingFang SC;
+      font-weight: 500;
+      color: #000000;
+      line-height: 28px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2; //限制文本的行数，只显示两行
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      padding: 0 8px;
+    }
+    .shop-price {
+      margin-top: 8px;
+      font-size: 20px;
+      font-family: PingFangSC-Medium, PingFang SC;
+      font-weight: 500;
+      color: #000000;
+      line-height: 28px;
+      padding: 0 8px;
+    }
+  }
+}
+.popupCleaning {
+  z-index: 101;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  left: 0;
+  top: 0;
+  .popupCleaning-con {
+    width: 576px;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 24px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 64px 24px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  .popupCleaning-con-title {
+    width: 100%;
+    font-size: 40px;
+    font-family: "SourceHanSansCN-Regular";
+    font-weight: 600;
+    color: rgba(0, 0, 0, 1);
+    line-height: 56px;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  .popupCleaning-con-contnet {
+    width: 100%;
+    font-family: "SourceHanSansCN-Regular";
+    font-weight: 400;
+    text-align: center;
+    line-height: 44px;
+    font-size: 28px;
+    color: #404040;
+  }
+  .popupCleaning-con-btn {
+    width: 480px;
+    height: 100px;
+    box-sizing: border-box;
+    font-size: 32px;
+    font-family: "SourceHanSansCN-Light";
+    font-weight: 400;
+    color: #fff;
+    // line-height: 98px;
+    background-image: url("https://ssl1.sephorastatic.cn/soa/mobile/images/mainButton_black_sm.png");
+    background-size: cover;
+    background-position: 0;
+    margin: 48px 24px 0;
+    text-align: center;
+    line-height: 80px;
+    &.cur {
+      background-image: url("https://ssl1.sephorastatic.cn/soa/mobile/images/mainButton_red_sm.png");
+      color: #fff;
+    }
+  }
+  .popupCleaning-con-cancle {
+    color: #8d8d8d;
+    font-size: 32px;
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "registerPage": [
+    "current_url",
+    "current_page_type",
+    "system_type",
+    "environment_type",
+    "vip_card",
+    "vip_card_type",
+    "action_id",
+    "page_id"
+  ],
+  "clickSignUp": ["$lib_detail"],
+  "clickSignUpByStoreVip": ["$lib_detail"],
+  "enterLoginPage_App_Mob": ["$lib_detail"],
+  "PDPClick": ["OP_code", "button_name", "current_url"],
+  "signUpResult": [
+    "sign_up_method",
+    "if_success",
+    "failure_reason",
+    "is_member_from_store",
+    "$lib_detail",
+    "userID"
+  ],
+  "loginResult": [
+    "login_channel",
+    "if_success",
+    "failure_reason",
+    "$lib_detail",
+    "userID"
+  ],
+  "choose_existing_vip_card": ["$lib_detail"],
+  "record_vip_card": [
+    "vip_card",
+    "vip_card_type",
+    "if_choose_existing_vip_card",
+    "$lib_detail"
+  ],
+  "clickBanner_App_Mob": [
+    "$lib_detail",
+    "banner_type",
+    "banner_content",
+    "banner_current_url",
+    "banner_current_page_type",
+    "banner_belong_area",
+    "banner_to_url",
+    "banner_to_page_type",
+    "banner_ranking",
+    "belong_team",
+    "campaign_code",
+    "key_word_tpye",
+    "key_word_tpye_details",
+    "page_id",
+    "action_id",
+    "op_code",
+    "commodity_sku",
+    "$element_position",
+    "$element_target_url",
+    "position"
+  ],
+  "startBuyNow": ["$lib_detail", "commodity_sku", "OP_code"],
+  "buyNow": ["$lib_detail", "commodity_sku", "OP_code", "commodity_number"],
+  "viewCommodityDetail": ["$lib_detail", "commodity_sku", "OP_code"],
+  "startAddToShoppingcart": ["$lib_detail", "commodity_sku", "OP_code"],
+  "addToShoppingcart": [
+    "$lib_detail",
+    "commodity_sku",
+    "OP_code",
+    "commodity_number"
+  ],
+  "submitOrder": ["orderID", "userID"],
+  "activeATShoppingcart": ["activityId", "userID"],
+  "myAccountClick": ["$lib_detail", "button_name"],
+  "MsgCenterExposure": ["msg_type"],
+  "LipFinderClick": ["OP_code", "commodity_sku", "button_name"],
+  "downloadAppClick": ["$lib_detail", "page_id", "action_id"],
+  "BestSellerListProductClick": [
+    "OP_code",
+    "commodity_sku",
+    "segment_ID",
+    "vip_card_type",
+    "vip_card"
+  ],
+  "TopRankingListClick": [
+    "OP_code",
+    "commodity_sku",
+    "current_url",
+    "topRankinglist_name"
+  ],
+  "pointMall_hp_click": ["coupon_name", "coupon_ID", "button_name"],
+  "pointMall_rewardspoint_click": [
+    "current_url",
+    "OP_code",
+    "commodity_sku",
+    "button_name",
+    "button_name"
+  ],
+  "pointMall_detail_click": ["current_url", "button_name"],
+  "CustomerServiceClick": ["button_location", "platform_type", "page_id", "action_id",
+  "$element_content", "brand_id", "categoryId", "current_url", "key_words", "page_type", "page_type_detail", "referrer"
+],
+  "raffleGameClick": ["OP_code", "commodity_sku", "button_name"],
+  "popup_downloadApp": ["current_url", "button_name", "action_id", "page_id", "$element_content"],
+  "ListProductClick": ["OP_code", "page_type_detail", "page_type", "action_id", "page_id",
+    "categoryId",
+    "button_name",
+    "brand_cn",
+    "brand_id",
+    "commodity_sku",
+    "op_code",
+    "banner_ranking"
+  ],
+  "ListClick": [
+    "page_type_detail",
+    "page_type",
+    "categoryId",
+    "brand_cn",
+    "brand_id",
+    "key_words",
+    "button_name",
+    "page_id",
+    "action_id",
+    "$element_target_url"
+  ],
+  "giftSelectionClick": [
+    "if_clickBudget",
+    "OP_code",
+    "commodity_sku",
+    "button_name",
+    "action_id"
+  ],
+  "$AppViewScreen": [
+    "platform_type",
+    "system_type",
+    "environment_type",
+    "vip_card",
+    "vip_card_type",
+    "page_id",
+    "action_id",
+    "adhoc_experiments",
+    "referrer_page_id",
+    "referrer",
+    "title",
+    "page_type_detail",
+    "page_type",
+    "url_path",
+    "url_query",
+    "url",
+    "current_url",
+    "screen_name"
+  ],
+  "$WebClick": [
+    "$element_content",
+    "page_id",
+    "action_id"
+  ],
+  "$pageview": [
+    "page_id",
+    "action_id",
+    "$screen_name"
+  ]
+}

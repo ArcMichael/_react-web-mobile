@@ -1,0 +1,10 @@
+[
+  {
+    "lookup": "text/css",
+    "maxAge": 1209600
+  },
+  {
+    "lookup": "application/javascript",
+    "maxAge": 1209600
+  }
+]

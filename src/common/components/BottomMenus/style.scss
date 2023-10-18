@@ -1,0 +1,171 @@
+@use "sass:math";
+
+$mulriple: 2;
+$iconBaseSize: 0.64rem * $mulriple;
+$iconTargetSize: 0.8rem * $mulriple;
+
+$iconBaseBottomMargin: 0.8rem * $mulriple;
+$iconTargetBottomMargin: (0.8 + 0.18rem) * $mulriple;
+
+@keyframes iconAnimation {
+  from {
+    margin-bottom: $iconBaseBottomMargin;
+    height: $iconBaseSize;
+    width: $iconBaseSize;
+  }
+  to {
+    margin-bottom: $iconTargetBottomMargin;
+    height: $iconTargetSize;
+    width: $iconTargetSize;
+  }
+}
+@keyframes iconAnimationBack {
+  from {
+    margin-bottom: $iconTargetBottomMargin;
+    height: $iconTargetSize;
+    width: $iconTargetSize;
+  }
+  to {
+    margin-bottom: $iconBaseBottomMargin;
+    height: $iconBaseSize;
+    width: $iconBaseSize;
+  }
+}
+
+@mixin bottomStyle() {
+  box-shadow: 0 0 5px * $mulriple 5px * $mulriple rgba(0, 0, 0, 0.05 * $mulriple);
+  display: flex;
+  width: 100% * $mulriple;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding: 0 0.3rem * $mulriple;
+  align-items: flex-end;
+  z-index: 1111;
+  transform: scale(math.div(1, $mulriple), math.div(1, $mulriple)) translateX(-7.5rem);
+  -ms-transform: scale(math.div(1, $mulriple), math.div(1, $mulriple)) translateX(-7.5rem); /* IE 9 */
+  -webkit-transform: scale(math.div(1, $mulriple), math.div(1, $mulriple)) translateX(-7.5rem); /* Safari and Chrome */
+
+  .bg {
+    width: 100%;
+    height: 2rem * $mulriple;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 111;
+    &.isShowToTop {
+      .bottom {
+        .MenuItem {
+          span {
+            color: #000;
+            font-weight: 500;
+            @include pingfang-mid;
+          }
+          &:first-child {
+            .MenuItem-icon {
+              animation: iconAnimation 0.3s;
+              border-radius: 50%;
+              background-color: #000000;
+              width: $iconTargetSize;
+              height: $iconTargetSize;
+              margin-bottom: $iconTargetBottomMargin;
+              [class^="icon-"] {
+                &::before {
+                  color: #fff;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .bottom {
+      height: 1.6rem * 2;
+      position: absolute;
+      box-sizing: border-box;
+      left: 0;
+      bottom: 0;
+      padding: 0 0.24rem * $mulriple;
+      width: 100%;
+      display: flex;
+      background-color: #fff;
+      > a.MenuItem {
+        width: 20%;
+        position: relative;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        .MenuItem-icon {
+          animation: iconAnimationBack 0.3s;
+          position: relative;
+          height: $iconBaseSize;
+          width: $iconBaseSize;
+          line-height: $iconBaseSize;
+          margin-bottom: $iconBaseBottomMargin;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex: 0 0 auto;
+          .shopcart-upper {
+            position: absolute;
+            display: block;
+            text-align: center;
+            line-height: 0.28rem * $mulriple;
+            top: 0.01rem * $mulriple;
+            right: -0.01rem $mulriple;
+            width: 0.28rem * $mulriple;
+            height: 0.28rem * $mulriple;
+            border-radius: 0.14rem * $mulriple;
+            background-color: #dd0031;
+            color: #fff;
+            font-size: 0.2rem * $mulriple;
+            font-weight: 500;
+            @include pingfang-mid;
+          }
+        }
+
+        &.active {
+          color: #000000;
+          span {
+            color: #000000;
+            font-weight: 500;
+            @include pingfang-mid;
+          }
+          [class^="icon-"] {
+            color: #000000;
+            &::before {
+              color: #000000;
+            }
+          }
+        }
+        [class^="icon-"] {
+          font-size: 0.64rem * $mulriple;
+          height: 0.64rem * $mulriple;
+          color: #666;
+          &::before {
+            color: #666;
+          }
+        }
+        .text {
+          position: absolute;
+          bottom: 0.4rem * $mulriple;
+          left: 0;
+          text-align: center;
+          height: 0.4rem * $mulriple;
+          line-height: 0.4rem * $mulriple;
+          font-size: 0.2rem * $mulriple;
+          font-weight: 400;
+          color: #666666;
+          @include pingfang-regular;
+        }
+      }
+    }
+  }
+}
+
+.BottomMenus {
+  @include bottomStyle();
+}

@@ -1,0 +1,19 @@
+.horizontal-rect.loading-img {
+  height: 100% !important;
+  width: auto !important;
+}
+
+.vertical-rect.loading-img {
+  width: 100% !important;
+  height: auto !important;
+}
+.square.loading-img {
+  width: 100% !important;
+  height: 100% !important;
+}
+.circle.loading-img {
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 50% !important;
+  overflow: hidden !important;
+}

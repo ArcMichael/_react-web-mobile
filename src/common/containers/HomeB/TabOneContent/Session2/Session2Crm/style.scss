@@ -1,0 +1,45 @@
+.Session2-crm {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.2rem;
+  padding: 0px 0.4rem;
+  height: 0.96rem;
+  > .left {
+    .text {
+      font-size: 0.36rem;
+      font-weight: 600;
+      color: #000000;
+      @include pingfang-bold;
+      &.islogin {
+        display: flex;
+        align-items: center;
+        > span {
+          display: flex;
+          align-items: center;
+        }
+        > img {
+          width: 0.48rem;
+          height: 0.3rem;
+          margin-left: 0.12rem;
+        }
+      }
+    }
+  }
+  > .right {
+    height: 0.24rem;
+    font-size: 0.24rem;
+    font-weight: 400;
+    color: #666666;
+    line-height: 0.24rem;
+    @include pingfang-regular;
+    display: flex;
+    align-items: center;
+    .icon-right {
+      font-size: 0.24rem;
+    }
+    > span {
+      color: #666666;
+    }
+  }
+}

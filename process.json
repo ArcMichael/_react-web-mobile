@@ -1,0 +1,12 @@
+{
+  "apps" : [{
+    "script"    : "server.bundle.js",
+    "instances" : "max",
+    "exec_mode" : "cluster",
+    "env": {
+      "NODE_ENV": "production",
+      "SOA_NODE_PORT": 60010,
+      "SOA_NODE_ENV": "ebf"
+    }
+  }]
+}

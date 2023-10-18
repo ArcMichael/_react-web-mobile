@@ -1,0 +1,110 @@
+@import "../../mixin";
+
+.TabOneContent {
+  .Session4 {
+    .Session4-card {
+      margin-top: 0.48rem;
+      &:first-child {
+        margin-top: 0.72rem;
+      }
+      box-shadow: 0 0.2rem 0.3rem 0 rgba(0, 0, 0, 0.15);
+      position: relative;
+      overflow: auto;
+      border-radius: none;
+      background-color: transparent;
+      &::before {
+        content: "";
+        display: block;
+        height: 4rem;
+      }
+      .vertical-rect.loading-img {
+        width: 100%;
+        height: auto;
+      }
+      > img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        border-radius: 0.24rem;
+        overflow: hidden;
+      }
+      .content {
+        position: relative;
+        color: #fff;
+        padding: 0 0.4rem;
+        > .title {
+          margin-bottom: 0.08rem;
+          line-height: 0.48rem;
+          height: 0.48rem;
+          font-size: 0.48rem;
+          @include pingfang-bold;
+          font-weight: 600;
+        }
+        > .subtitle {
+          display: block;
+          margin-bottom: 0.32rem;
+          height: 0.44rem;
+          font-size: 0.28rem;
+          font-weight: 400;
+          color: #ffffff;
+          line-height: 0.44rem;
+          @include pingfang-regular;
+        }
+
+        .products {
+          margin: 0 -0.4rem;
+          margin-top: 0.4rem;
+          padding: 0.4rem;
+          padding-top: 0;
+          overflow: hidden;
+          border-bottom-right-radius: 0.5rem;
+          border-bottom-left-radius: 0.5rem;
+          .product-item {
+            .product-image-wrap {
+              width: 2.08rem !important;
+              height: 2.08rem !important;
+              margin-top: 0.16rem !important;
+              margin-bottom: 0.16rem !important;
+            }
+            .product-title {
+              height: 0.56rem;
+              font-size: 0.2rem;
+              font-weight: 600;
+              color: #0d0d0d;
+              line-height: 0.28rem;
+              text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
+              margin-bottom: 0.08rem;
+              @include pingfang-mid;
+            }
+            .product-price {
+              height: 0.28rem;
+              font-size: 0.2rem;
+              font-weight: 400;
+              color: #262626;
+              line-height: 0.28rem;
+              text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
+              @include pingfang-sfprotext;
+            }
+          }
+          @include scrollX;
+          > div {
+            display: flex;
+            &::after {
+              content: "";
+              width: 0.24rem;
+              flex: 0 0 auto;
+            }
+          }
+          .product-item {
+            flex: 0 0 auto;
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+    "noRetiontionUrl":[
+      "/login",
+      "/register",
+      "/forgottenPassword",
+      "/wxBindCard",
+      "/wxChooseCard",
+      "/wxBindCustomedCard",
+      "/wxlogin",
+      "/resetPasswords",
+      "/v2/html/lipQuiz.html",
+      "/v2/html/mgmTrialApplication",
+      "/v2/html/mgmRankList",
+      "/v2/html/mgmTrialApplicationIndex",
+      "/v2/html/mgmTrialApplicationDetails"
+    ]
+  }

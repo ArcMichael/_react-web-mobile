@@ -1,0 +1,162 @@
+@import "../../mixin";
+
+.TabOneContent {
+  // 美力广场
+  .Session5 {
+    %channelTitle {
+      margin-top: 0.32rem;
+      margin-bottom: 0.16rem;
+
+      height: 0.44rem;
+      font-size: 0.28rem;
+      font-weight: 600;
+      color: #000000;
+      line-height: 0.44rem;
+      @include pingfang-bold;
+    }
+    .Session5-crm {
+      width: 100%;
+      margin-top: 0.2rem;
+      height: 1.2rem;
+      background-color: #fff;
+      display: flex;
+      position: relative;
+      .bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        overflow: hidden;
+        border-top-right-radius: 0.16rem;
+        border-bottom-right-radius: 0.16rem;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .content {
+        display: flex;
+        align-items: center;
+        .photo {
+          width: 0.58rem;
+          height: 0.58rem;
+          border-radius: 50%;
+          overflow: hidden;
+          margin-left: 0.5rem;
+          margin-right: 0.22rem;
+        }
+        .info {
+          .name {
+            height: 0.32rem;
+            font-size: 0.22rem;
+            @include pingfang-mid;
+            font-weight: 500;
+            color: #000000;
+            line-height: 0.32rem;
+            display: flex;
+            max-width: 1.7rem;
+          }
+          .card {
+            display: flex;
+            align-items: center;
+            .card-img {
+              width: 0.32rem;
+              height: 0.2rem;
+              margin-right: 5px;
+            }
+            .card-info {
+              height: 0.26rem;
+              font-size: 0.18rem;
+              @include pingfang-regular;
+              font-weight: 400;
+              color: #666666;
+              line-height: 0.26rem;
+            }
+          }
+        }
+      }
+    }
+    .Session5-channel1 {
+      > h4 {
+        @extend %channelTitle;
+      }
+      > a {
+        display: block;
+        border-radius: 0.16rem;
+        overflow: hidden;
+        height: 2.28rem;
+        background-color: #fff;
+        position: relative;
+        text-align: center;
+        .horizontal-rect.loading-img {
+          height: 100%;
+          width: auto;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    .Session5-channel2 {
+      display: flex;
+      > a {
+        width: 2.08rem;
+        background-color: #fff;
+        margin-right: 0.16rem;
+        &:last-child {
+          margin-right: 0;
+        }
+        > h4 {
+          @extend %channelTitle;
+        }
+        > div {
+          width: 100%;
+          height: 2.24rem;
+          > img {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            border-radius: 0.2rem;
+          }
+        }
+      }
+    }
+    .Session5-channel3 {
+      > h4 {
+        @extend %channelTitle;
+      }
+      > div {
+        display: flex;
+        margin-bottom: 0.4rem;
+        @include scrollX();
+        > a {
+          width: 0.96rem;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-right: 0.32rem;
+          &:last-child {
+            margin-right: 0;
+          }
+          > h5 {
+            margin-top: 0.16rem;
+            @include pingfang-mid;
+            width: 100%;
+            height: 0.4rem;
+            font-size: 0.24rem;
+            font-weight: 600;
+            color: #000000;
+            line-height: 0.4rem;
+          }
+          > div {
+            @include imageWrap(0.72rem);
+            border-radius: 0.2rem;
+            overflow: hidden;
+          }
+        }
+      }
+    }
+  }
+}

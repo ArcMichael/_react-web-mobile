@@ -1,0 +1,95 @@
+.popup-toast{
+    padding: 24px;
+    position: fixed;
+    z-index: 201;
+    left: 50%;
+    top: 30%;
+    min-width: 264px;
+    transform: translate(-50%, -50%);
+    border-radius: 24px;
+    background: rgba(0, 0, 0, 0.75);
+    max-width: 576px;
+    p {
+      text-align: center;
+      line-height: 44px;
+      font-size: 24px;
+      color: #fff;
+      font-size: 28px;
+      max-width: 480px;
+      font-family: "SourceHanSansCN-Normal";
+    }
+}
+.popup-alert {
+  position: fixed;
+  z-index: 201;
+  left: 50%;
+  top: 40%;
+  min-width: 208px;
+  // width: 476px;
+  min-height: 252px;
+  // height: 320px;
+  transform: translate(-50%, -50%);
+  border-radius: 24px;
+  background: rgba(0, 0, 0, 0.75);
+  &.large {
+    width: 576px;
+  }
+  &.cur {
+    top: 24%;
+
+    // opacity: 0.8;
+    background: rgba(0, 0, 0, 0.8);
+
+    em {
+      width: 368px;
+      left: 58px;
+    }
+  }
+
+  &.more {
+    top: 36%;
+  }
+
+  span {
+    display: block;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    left: 50%;
+    top: 64px;
+    margin-left: -40px;
+    background: url("https://ssl1.sephorastatic.cn/soa/mobile/images/mobile_pdp.png") -88px -120px;
+
+    &.warnning {
+      background: url("https://ssl1.sephorastatic.cn/soa/mobile/images/mobile_pdp.png") -777px -135px;
+    }
+  }
+
+  .popup-alert-tip {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 48px 0 0 50%;
+    transform: translateX(-50%);
+  }
+
+  .popup-alert-bottom {
+    padding: 18px 48px 48px;
+  }
+
+  .popup-alert-bottom-main {
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
+
+  em {
+    display: block;
+    font-family: "SourceHanSansCN-Normal";
+    font-size: 28px;
+    color: #ffffff;
+    line-height: 44px;
+    max-width: 480px;
+    text-align: center;
+  }
+}

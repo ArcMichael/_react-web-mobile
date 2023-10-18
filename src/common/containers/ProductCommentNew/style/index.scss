@@ -1,0 +1,216 @@
+@import "../../../../public/style/lib/index.scss";
+@import "../../../../public/style/default.scss";
+.comment-top {
+  height: 110px;
+  display: flex;
+  justify-content: space-between;
+  .star-box {
+    margin-left: 48px;
+    // display: flex;
+    // flex-direction: column;
+  }
+}
+
+.star-text {
+  margin-top: 10px;
+  // width: 106px;
+  text-align: center;
+  font-size: 22px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #333333;
+  line-height: 32px;
+  .now-num {
+    font-size: 28px;
+    font-family: PingFangSC-Semibold, PingFang SC;
+    font-weight: 600;
+    line-height: 44px;
+  }
+}
+
+.choose-specs {
+  height: 168px;
+  margin-top: 24px;
+  background: #f5f5f5;
+  font-size: 28px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #000000;
+  line-height: 32px;
+  padding: 32px 24px;
+  box-sizing: border-box;
+}
+
+.specs-box {
+  width: 702px;
+  height: 104px;
+  background: #ffffff;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  padding: 36px 32px;
+  box-sizing: border-box;
+  justify-content: space-between;
+  .specs-title {
+    padding-right: 36px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #000000;
+  }
+  img {
+    width: 20px;
+    height: 8px;
+  }
+}
+
+.product-evaluate-praise-grade-img {
+  background: url("https://ssl1.sephorastatic.cn/soa/nmobile/img/product/mobile_pdp_start.png")
+    no-repeat center;
+  background-size: contain;
+  width: 110px;
+  height: 16px;
+  position: relative;
+  float: left;
+  margin: 20px 10px 10px 0;
+  > div {
+    height: 24px;
+    position: absolute;
+    left: -3px;
+    overflow: hidden;
+
+    > span {
+      background: url("https://ssl1.sephorastatic.cn/soa/nmobile/img/product/mobile_pdp_redStar.png")
+        no-repeat center -1px;
+      width: 140px;
+      background-size: contain;
+      height: 24px;
+      position: absolute;
+    }
+  }
+}
+
+.pouple-attar-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9;
+  .pouple-content {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    min-height: 676px;
+    background: #ffffff;
+    border-radius: 24px 24px 0px 0px;
+    padding: 48px;
+    box-sizing: border-box;
+    .pouple-header {
+      display: flex;
+      justify-content: space-between;
+      strong {
+        font-size: 40px;
+        line-height: 56px;
+      }
+      img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+    .pouple-good {
+      padding: 24px 0 64px;
+      display: flex;
+      align-items: flex-end;
+      box-sizing: border-box;
+      width: 100%;
+      img {
+        width: 180px;
+        height: 180px;
+      }
+      .pouple-good-right {
+        width: 402px;
+        padding-left: 16px;
+        line-height: 28px;
+        strong {
+          font-size: 24px;
+          word-wrap: break-word;
+        }
+        p {
+          padding-top: 8px;
+          font-size: 24px;
+          transform: scale(0.9);
+          margin-left: -22px;
+        }
+      }
+    }
+    .pouple-attar {
+      p {
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 44px;
+      }
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 20px;
+        li {
+          border-radius: 32px;
+          background-color: #f5f5f5;
+          border: 2px solid #f5f5f5;
+          box-sizing: border-box;
+          height: 64px;
+          display: flex;
+          align-items: center;
+          font-size: 24px;
+          margin-right: 16px;
+          margin-bottom: 16px;
+          padding: 0 16px;
+          color: #666666;
+          img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 12px;
+          }
+          span {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 12px;
+          }
+        }
+        .active {
+          background-color: #fff;
+          border: 2px solid #cccccc;
+          color: #000;
+          font-weight: 600;
+        }
+      }
+    }
+    .pouple-footer {
+      display: flex;
+      border-radius: 35px;
+      overflow: hidden;
+      margin-top: 16px;
+      box-shadow: 0px 10px 20px 0px rgb(0 0 0 / 20%);
+      div {
+        flex: 1;
+        background: #000;
+        line-height: 80px;
+        color: #fff;
+        text-align: center;
+        font-size: 28px;
+        cursor: pointer;
+        &:first-child {
+          background: #f2f2f2;
+          color: #666;
+        }
+      }
+    }
+  }
+}

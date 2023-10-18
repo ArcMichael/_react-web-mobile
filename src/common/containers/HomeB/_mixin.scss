@@ -1,0 +1,20 @@
+@import "../../../public/style/lib/index";
+
+a {
+  &:hover,
+  &:focus {
+    color: inherit;
+    outline: none;
+  }
+}
+
+.pingfang-regular {
+  @include pingfang-regular();
+}
+
+@media screen {
+}
+@media screen {
+}
+@media screen {
+}

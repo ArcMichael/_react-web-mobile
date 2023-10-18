@@ -1,0 +1,12 @@
+@import '../../../public/style/lib/index';
+
+.text {
+  @include textSize(0.22rem);
+  width: 100%;
+  &.ellipsis {
+    @include ellipsis(1);
+  }
+  &.ellipsis-multi {
+    @include ellipsis(2);
+  }
+}

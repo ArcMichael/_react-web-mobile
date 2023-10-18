@@ -1,0 +1,15 @@
+export { default as HomeFilled } from "./HomeFilled";
+export { default as HomeOutlined } from "./HomeOutlined";
+export { default as CategoryFilled } from "./CategoryFilled";
+export { default as CategoryOutlined } from "./CategoryOutlined";
+export { default as TagFilled } from "./TagFilled";
+export { default as TagOutlined } from "./TagOutlined";
+export { default as MineFilled } from "./MineFilled";
+export { default as MineOutlined } from "./MineOutlined";
+export { default as ShoppingCartFilled } from "./ShoppingCartFilled";
+export { default as ShoppingCartOutlined } from "./ShoppingCartOutlined";
+export { default as TrumpetOutlined } from "./TrumpetOutlined";
+export { default as UserOutlined } from "./UserOutlined";
+export { default as SearchOutlined } from "./SearchOutlined";
+export { default as RightArrowOutlined } from "./RightArrowOutlined";
+export { default as RightArrowRectFilled } from "./RightArrowRectFilled";

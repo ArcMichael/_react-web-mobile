@@ -1,0 +1,25 @@
+{
+  "url": [
+    "/myAccount",
+    "/v2/html/myAccountHistoryCoupon",
+    "/myAccount/management",
+    "/v2/html/mgmRankList",
+    "/myAccount/integralFlow",
+    "/myAccount/myMemberCard",
+    "/content/card",
+    "/myAccount/address",
+    "/myAccount/modifyPassword",
+    "/myAccount/changeHistory",
+    "/logisticsInfo",
+    "/myOrderList",
+    "v2/html/bookingOrder",
+    "/order-*"
+  ],
+  "user": [
+    "/v1/shopcart/shopcart/addToCartForSingleProduct",
+    "/v1/shopcart/reminder/saveArrivalReminderUserData",
+    "/v1/shopcart/shopcart/addToCartForSingleProduct",
+    "/v1/portal/invoicetitle",
+    "/v1/es/product/tryout"
+  ]
+}

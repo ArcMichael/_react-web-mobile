@@ -1,0 +1,73 @@
+@mixin post-item {
+  .post-item {
+    .post-item-imagewrap {
+      width: 100%;
+      height: 3.34rem;
+      > img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .post-item-bottom {
+      padding: 0 0.16rem;
+      .post-item-user {
+        display: flex;
+        align-items: center;
+        margin-top: 0.46rem;
+        margin-bottom: 0.16rem;
+        .post-item-avatar {
+          width: 0.48rem;
+          height: 0.48rem;
+          flex: 0 0 auto;
+          img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+          }
+        }
+        .post-item-name {
+          flex: 0 1 auto;
+          width: 100%;
+          height: 0.32rem;
+          font-size: 0.2rem;
+          font-family: PingFangSC-Regular, PingFang SC;
+          font-weight: 400;
+          color: #0d0d0d;
+          line-height: 0.32rem;
+          margin-left: 0.16rem;
+        }
+        .post-item-xin {
+          margin-right: 0.12rem;
+          .sephora-icon-collect,
+          .sephora-icon-collect-fill {
+            font-size: 0.26rem;
+          }
+          width: 0.26rem;
+          height: 0.22rem;
+          line-height: 0.22rem;
+        }
+      }
+      .post-item-tag {
+        font-size: 0.24rem;
+        font-weight: 500;
+        color: #0d0d0d;
+        line-height: 0.32rem;
+        @include ellipsis(2);
+        @include pingfang-mid;
+      }
+      .post-item-desc {
+        height: 0.96rem;
+        font-size: 0.24rem;
+        font-weight: 400;
+        color: #0d0d0d;
+        line-height: 0.32rem;
+        overflow: hidden;
+        @include ellipsis(3);
+        @include pingfang-mid;
+        span {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

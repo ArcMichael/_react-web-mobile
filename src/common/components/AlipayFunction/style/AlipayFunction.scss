@@ -1,0 +1,122 @@
+.pay-box {
+  background-color: #fff;
+  margin-top: 20px;
+  .disappear {
+    display: none;
+  }
+  .row {
+    padding: 20px 0px 20px 24px;
+    border-top: 1px solid #ddd;
+    position: relative;
+    font-size: 28px;
+    &:nth-child(1) {
+      border-top: none;
+    }
+    //      &:nth-child(3){
+    //          display: none;
+    //      }
+    .iconC {
+      vertical-align: middle;
+    }
+    .iconC-radio {
+      position: absolute;
+      right: 24px;
+      top: 30px;
+    }
+    .iconC-alipay {
+    }
+    .iconC-alipay {
+    }
+    .iconC-bank {
+    }
+    label {
+      margin-left: 30px;
+      vertical-align: middle;
+    }
+    .iconC-down {
+      position: absolute;
+      right: 24px;
+      top: 44px;
+    }
+    .iconC-up {
+      position: absolute;
+      right: 24px;
+      top: 44px;
+    }
+    .bank-list {
+      position: relative;
+      top: 24px;
+      background-color: #fff;
+      left: -24px;
+      display: none;
+      width: 750px;
+      .title {
+        padding: 30px 0px 40px 26px;
+        font-size: 24px;
+        border-top: 1px solid #ddd;
+        color: #858585;
+        .iconC {
+          margin-right: 10px;
+          vertical-align: middle;
+        }
+      }
+      li {
+        padding-left: 26px;
+        padding-bottom: 42px;
+        font-size: 28px;
+        color: #000;
+        .iconC {
+          margin-right: 28px;
+        }
+        .iconC-radio {
+          right: 0px;
+        }
+        &.item {
+          position: relative;
+          padding-left: 26px;
+          font-size: 24px;
+          color: #000;
+          .iconC {
+            margin-right: 28px;
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+  }
+  .iconC {
+    vertical-align: middle;
+    display: inline-block;
+    background-size: cover;
+  }
+  .iconC-alipay {
+    background-image: url("https://sslstage1.sephorastatic.cn/soa/mobile/images/order/iconC_alipay.png");
+    width: 60px;
+    height: 60px;
+  }
+  .iconC-wechart {
+    background-image: url("https://sslstage1.sephorastatic.cn/soa/mobile/images/order/iconC_wechat.png");
+    width: 60px;
+    height: 60px;
+  }
+  .iconC-silk {
+    background-image: url("https://sslstage1.sephorastatic.cn/soa/mobile/images/order/mobile_sixiangka.png");
+    background-size: 100%;
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .iconC-radio {
+    position: absolute;
+    right: 24px;
+    top: 30px;
+    width: 38px;
+    height: 38px;
+    background-image: url("https://sslstage1.sephorastatic.cn/soa/mobile/images/order/iconC_radio.png");
+    &.cur {
+      background-image: url("https://sslstage1.sephorastatic.cn/soa/mobile/images/order/iconC_radio_checked.png");
+    }
+  }
+}

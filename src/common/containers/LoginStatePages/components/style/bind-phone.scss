@@ -1,0 +1,35 @@
+.get-code {
+  margin-bottom: 48px;
+  &:last-child {
+    margin-bottom: 64px;
+  }
+}
+.email-title {
+  height: 56px;
+  font-size: 40px;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 600;
+  color: #000000;
+  line-height: 56px;
+  margin: 64px 0 32px 0;
+  text-align: center;
+}
+.email-tel {
+  display: block;
+  font-size: 24px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #999999;
+  line-height: 32px;
+  // margin-top: 32px;
+  text-align: center;
+  outline-style: none;
+}
+.bind-cancel {
+  font-size: 32px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #8d8d8d;
+  line-height: 48px;
+  text-align: center;
+}

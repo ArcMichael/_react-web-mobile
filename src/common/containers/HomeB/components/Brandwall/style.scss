@@ -1,0 +1,38 @@
+.brandwarll {
+  > .wrap {
+    display: flex;
+    flex-wrap: wrap;
+    > a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 0.76rem;
+      width: 1.52rem;
+      position: relative;
+      border-radius: 0.16rem;
+      overflow: hidden;
+      box-shadow: 0 0.1rem 0.2rem 0.04rem rgba(0, 0, 0, 0.06);
+      margin-right: 0.16rem;
+      margin-bottom: 0.32rem;
+      &:nth-of-type(2n) {
+        margin-right: 0.14rem;
+      }
+      &:nth-of-type(4n) {
+        margin-right: 0;
+      }
+      > img {
+        width: 1.44rem;
+        height: 0.6rem;
+      }
+    }
+  }
+  .brandwarll-title {
+    @include pingfang-bold();
+    text-align: center;
+    font-size: 0.28rem;
+    font-weight: 600;
+    color: #000000;
+    line-height: 0.44rem;
+    height: 0.44rem;
+  }
+}

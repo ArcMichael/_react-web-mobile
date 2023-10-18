@@ -1,0 +1,47 @@
+[
+    {
+        "defaultIcon":"https://ssl1.sephorastatic.cn/soa/nmobile/img/tabBar_home_n.png",
+        "activeIcon":"https://ssl1.sephorastatic.cn/soa/nmobile/img/tabBar_home_a.png",
+        "defaultText":"首页",
+        "link":"/",
+        "sensor":true,
+        "regRexTest":"^\/$",
+        "buttonPosition":"Animation"
+    },
+    {
+        "defaultIcon":"https://ssl1.sephorastatic.cn/soa/nmobile/img/tabBar_category_n.png",
+        "activeIcon":"https://ssl1.sephorastatic.cn/soa/nmobile/img/tabBar_category_a.png",
+        "defaultText":"分类",
+        "link":"/category/60001/",
+        "regRexTest":"^\/category\/.+\/$",
+        "belongTeam":"Navigation",
+        "buttonPosition":"Animation"
+    },
+    {
+        "defaultIcon":"https://ssl1.sephorastatic.cn/soa/nmobile/img/tabBar_mei_n2.png",
+        "activeIcon":"https://ssl1.sephorastatic.cn/soa/nmobile/img/tabBar_mei_a2.png",
+        "defaultText":"优惠专享",
+        "link":"/weeklyspecials/",
+        "regRexTest":"meiIn",
+        "belongTeam":"Site Operation",
+        "buttonPosition":"Animation"
+    },
+    {
+        "defaultIcon":"https://ssl1.sephorastatic.cn/soa/nmobile/img/tabBar_cart_n.png",
+        "activeIcon":"https://ssl1.sephorastatic.cn/soa/nmobile/img/tabBar_cart_a.png",
+        "defaultText":"购物袋",
+        "link":"/cart",
+        "regRexTest":"^\/cart(\/)?",
+        "belongTeam":"Site Operation",
+        "buttonPosition":"Animation"
+    },
+    {
+        "defaultIcon":"https://ssl1.sephorastatic.cn/soa/nmobile/img/tabBar_me_n.png",
+        "activeIcon":"https://ssl1.sephorastatic.cn/soa/nmobile/img/tabBar_me_a.png",
+        "defaultText":"我的",
+        "link":"/myAccount",
+        "regRexTest":"^\/myAccount(\/)?",
+        "belongTeam":"Site Operation",
+        "buttonPosition":"Animation"
+    }
+]

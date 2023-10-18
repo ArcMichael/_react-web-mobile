@@ -1,0 +1,26 @@
+{
+    "productList":[],
+    "returnReason":{
+        "name":"退货原因",
+        "iconUrl":"https://ssl1.sephorastatic.cn/soa/nmobile/img/myAccount/right-arrow-xi.png",
+        "value":"",
+        "callbackKEY":"getReturnReason",
+        "hasRight":false
+    },
+    "returnNumber":{
+        "name":"退货数量",
+        "iconUrl":"https://ssl1.sephorastatic.cn/soa/nmobile/img/myAccount/right-arrow-xi.png",
+        "value":"1",
+        "callbackKEY":"getReturnNumner",
+        "hasRight":false,
+        "limit":""
+    },
+    "returnAmount":{
+        "name":"退货金额",
+        "iconUrl":"",
+        "value":"",
+        "callbackKEY":"",
+        "hasRight":true,
+        "limit":""
+    }
+}

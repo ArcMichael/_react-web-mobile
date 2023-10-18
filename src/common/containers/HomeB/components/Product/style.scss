@@ -1,0 +1,31 @@
+@import "../../mixin";
+
+.product-wrap {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.2rem;
+  align-items: center;
+  flex: 0 0 auto;
+  .product-title {
+    @include pingfang-regular;
+    width: 2rem;
+    height: 0.5rem;
+    font-size: 0.2rem;
+    font-weight: 400;
+    color: #000000;
+    line-height: 0.26rem;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0.16rem;
+  }
+  .product-price {
+    @include pingfang-sfprotext;
+    width: 2.04rem;
+    height: 0.2rem;
+    font-size: 0.2rem;
+    font-weight: 300;
+    color: #000000;
+    line-height: 0.2rem;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+  }
+}

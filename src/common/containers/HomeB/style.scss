@@ -1,0 +1,32 @@
+@import "../../../public/style/common/module_deeplink";
+@import "../../../common/components/Text/style";
+@import "../../../common/components/Popup/FirstLogin";
+@import "../../../common/components/LazyloadImage/style";
+@import "./components/ChannelTitle/style";
+@import "./mixin";
+@import "./components/Tabs/style";
+@import "./components/Card/style";
+
+@import "../../../common/components/BottomMenus/style";
+@import "./components/Carousel/style";
+@import "./components/Product/style";
+
+@import "./components/headV2/style";
+@import "./TabOneContent/style";
+@import "./TabCommonContent/style";
+@import "./components/GusessYouLike/style";
+
+@import "../../../public/style/common/_module_guess_you_like.scss";
+@import "../../../public/style/common/_module_common_tabBar.scss";
+@import "../../../public/style/common/common_search_expand";
+@import "../../../public/style/common/module_popup_ui";
+@import "../../../public/style/common//module_retention_info";
+@import "../../../public/style/common/atom_button";
+@import "../../../public/style/common/atom_input";
+@import "../../../public/style/common/atom_loading_animation";
+@import "../../../public/style/common/common_useragreement";
+@import "../../../public/style/common/_common_sephora-agreement_module.scss";
+
+body {
+  @include pingfang-regular;
+}

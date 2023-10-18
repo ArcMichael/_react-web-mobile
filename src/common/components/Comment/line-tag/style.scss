@@ -1,0 +1,85 @@
+.line-tag-box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex: 1;
+  padding-left: 40px;
+  > div {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.line-tag {
+  font-size: 20px;
+  font-weight: 400;
+  color: #333333;
+  line-height: 28px;
+  display: flex;
+  align-items: center;
+}
+
+.line-box {
+  width: 422px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 4px;
+  box-sizing: border-box;
+  position: relative;
+  margin-left: 12px;
+  .bg-bar {
+    width: calc(100% - 18px);
+    height: 4px;
+    background: url("https://sslstage1.sephorastatic.cn/soa/mobile/images/empty.png");
+    background-size: 100% 100%;
+    border-radius: 4px;
+    position: absolute;
+    top: 4px;
+    left: 6px;
+  }
+  .process {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    background: url("https://sslstage1.sephorastatic.cn/soa/mobile/images/progess.png");
+    background-size: 100% 100%;
+    width: calc(100% - 18px);
+    height: 4px;
+    background-color: #fff;
+  }
+  .process::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    right: 0;
+    width: 8px;
+    height: 8px;
+    background: #000000;
+    border-radius: 50%;
+  }
+}
+
+.line-tag3 {
+  .line-box {
+    width: 72px;
+  }
+  margin-right: 8px;
+}
+
+.line-tag2,
+.line-tag4 {
+  .line-box {
+    width: 160px;
+  }
+  margin-right: 8px;
+}
+
+.line-tag3:last-child {
+  margin-right: 0;
+}
+
+body {
+  margin: 0;
+}

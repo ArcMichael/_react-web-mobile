@@ -1,0 +1,259 @@
+[{
+    "fieldKey": "system_type",
+    "type": "string",
+    "autoComplete": "get_os"
+  },
+  {
+    "fieldKey": "environment_type",
+    "type": "string",
+    "autoComplete": "get_environment_type"
+  },
+  {
+    "fieldKey": "$lib_detail",
+    "type": "string"
+  },
+  {
+    "fieldKey": "current_url",
+    "type": "string",
+    "autoComplete": "get_current_url"
+  },
+  {
+    "fieldKey": "referrer",
+    "type": "string",
+    "autoComplete": "get_previous_url"
+  },
+  {
+    "fieldKey": "previous_url",
+    "type": "string",
+    "autoComplete": "get_previous_url"
+  },
+  {
+    "fieldKey": "current_page_type",
+    "type": "string",
+    "autoComplete": "get_current_page_type"
+  },
+  {
+    "fieldKey": "previous_page_type_new",
+    "type": "string",
+    "autoComplete": "get_previous_page_type_new"
+  },
+  {
+    "fieldKey": "sign_up_method",
+    "type": "string",
+    "autoComplete": "get_sign_up_method"
+  },
+  {
+    "fieldKey": "if_success",
+    "type": "boolean"
+  },
+  {
+    "fieldKey": "failure_reason",
+    "type": "string"
+  },
+  {
+    "fieldKey": "is_member_from_store",
+    "type": "boolean"
+  },
+  {
+    "fieldKey": "login_channel",
+    "type": "string",
+    "autoComplete": "get_sign_up_method"
+  },
+  {
+    "fieldKey": "vip_card",
+    "type": "string"
+  },
+  {
+    "fieldKey": "vip_card_type",
+    "type": "string"
+  },
+  {
+    "fieldKey": "if_choose_existing_vip_card",
+    "type": "boolean"
+  },
+  {
+    "fieldKey": "banner_type",
+    "type": "string"
+  },
+  {
+    "fieldKey": "banner_content",
+    "type": "string"
+  },
+  {
+    "fieldKey": "banner_current_url",
+    "type": "string",
+    "autoComplete": "get_current_url"
+  },
+  {
+    "fieldKey": "banner_current_page_type",
+    "type": "string",
+    "autoComplete": "get_current_page_type"
+  },
+  {
+    "fieldKey": "banner_belong_area",
+    "type": "string"
+  },
+  {
+    "fieldKey": "banner_to_url",
+    "type": "string"
+  },
+  {
+    "fieldKey": "banner_to_page_type",
+    "type": "string",
+    "autoComplete": "get_banner_to_page_type"
+  },
+  {
+    "fieldKey": "banner_ranking",
+    "type": "string"
+  },
+  {
+    "fieldKey": "belong_team",
+    "type": "string"
+  },
+  {
+    "fieldKey": "campaign_code",
+    "type": "string",
+    "autoComplete": "get_campaign_code"
+  },
+  {
+    "fieldKey": "key_word_tpye",
+    "type": "string"
+  },
+  {
+    "fieldKey": "key_word_tpye_details",
+    "type": "string"
+  },
+  {
+    "fieldKey": "commodity_sku",
+    "type": "string"
+  },
+
+  {
+    "fieldKey": "orderID",
+    "type": "string"
+  },
+  {
+    "fieldKey": "commodity_number",
+    "type": "number"
+  },
+  {
+    "fieldKey": "userID",
+    "type": "string"
+  },
+  {
+    "fieldKey": "activityId",
+    "type": "string"
+  },
+  {
+    "fieldKey": "button_name",
+    "type": "string"
+  },
+  {
+    "fieldKey": "msg_type",
+    "type": "string"
+  },
+  {
+    "fieldKey": "segment_ID",
+    "type": "string"
+  },
+  {
+    "fieldKey": "topRankinglist_name",
+    "type": "string"
+  },
+  {
+    "fieldKey": "coupon_name",
+    "type": "string"
+  },
+  {
+    "fieldKey": "coupon_ID",
+    "type": "string"
+  },
+  {
+    "fieldKey": "button_location",
+    "type": "string"
+  },
+  {
+    "fieldKey": "page_type_detail",
+    "type": "string",
+    "autoComplete": "get_page_type_detail"
+  },
+  {
+    "fieldKey": "page_type",
+    "type": "string",
+    "autoComplete": "get_page_type_detail"
+  },
+  {
+    "fieldKey": "categoryId",
+    "type": "string"
+  },
+  {
+    "fieldKey": "brand_cn",
+    "type": "string"
+  },
+  {
+    "fieldKey": "brand_id",
+    "type": "string"
+  },
+  {
+    "fieldKey": "key_words",
+    "type": "string"
+  },
+  {
+    "fieldKey": "if_clickBudget",
+    "type": "string"
+  },
+  {
+    "fieldKey": "action_id",
+    "type": "string"
+  },
+  {
+    "fieldKey": "page_id",
+    "type": "string"
+  }, {
+    "fieldKey": "adhoc_experiments",
+    "type": "string"
+  }, {
+    "fieldKey": "referrer",
+    "type": "string"
+  }, {
+    "fieldKey": "title",
+    "type": "string"
+  }, {
+    "fieldKey": "page_type_detail",
+    "type": "string"
+  }, {
+    "fieldKey": "page_type",
+    "type": "string"
+  }, {
+    "fieldKey": "url_path",
+    "type": "string"
+  }, {
+    "fieldKey": "url_query",
+    "type": "string"
+  }, {
+    "fieldKey": "url",
+    "type": "string"
+  }, {
+    "fieldKey": "current_url",
+    "type": "string"
+  }, {
+    "fieldKey": "screen_name",
+    "type": "string"
+  },
+  {
+    "fieldKey": "element_position",
+    "type": "string"
+  },
+  {
+    "fieldKey": "position",
+    "type": "string"
+  },
+  {
+    "fieldKey": "$element_target_url",
+    "type": "string"
+  },
+  {
+    "fieldKey": "$element_content",
+    "type": "string"
+  }
+]

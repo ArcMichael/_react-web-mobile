@@ -1,0 +1,8 @@
+.eslintrc.js
+scripts/*
+coverage
+src/public
+src/etc/
+dist/
+node_modules
+babel.config.js

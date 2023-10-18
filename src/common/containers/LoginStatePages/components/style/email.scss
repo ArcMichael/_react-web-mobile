@@ -1,0 +1,59 @@
+@import "../../../../../public/style/default.scss";
+@import "../../../../../public/style/loginNew.scss";
+.email-title {
+  height: 56px;
+  font-size: 40px;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 600;
+  color: #000000;
+  line-height: 56px;
+  margin: 18px 0 0 64px;
+}
+.email-desc {
+  margin-left: 64px;
+  font-size: 24px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #4d4d4d;
+}
+.email-icon {
+  width: 88px;
+  height: 88px;
+  margin: 110px auto 0;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.email-btn {
+  background: url("https://ssl1.sephorastatic.cn/soa/mobile/images/mainButton_black_mid.png");
+  width: 654px;
+  height: 96px;
+  background: #000000;
+  box-shadow: 0px 8px 20px 0px #aaaaaa;
+  border-radius: 48px;
+  margin: 64px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 48px;
+}
+.email-tel {
+  display: block;
+  font-size: 24px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #999999;
+  line-height: 32px;
+  margin-top: 256px;
+  text-align: center;
+  outline-style: none;
+}
+.login-title{
+  padding-left: 32px;
+  box-sizing: border-box;
+}
